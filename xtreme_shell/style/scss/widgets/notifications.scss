@@ -1,0 +1,12 @@
+.notification {
+    padding: 10px;
+    border-radius: 13px;
+    background-color: $background;
+    box-shadow: 2px 3px 8px 0 gtkalpha(black, .4);
+    border: 1pt solid gtkalpha($primary, .03);
+}
+
+.notification-wrap {
+    border-radius: 10px;
+    padding: 10px;
+}

@@ -1,0 +1,90 @@
+@use "sass:string";
+
+@function gtkalpha($c, $a) {
+    @return string.unquote("alpha(#{$c},#{$a})");
+}
+
+@import "colors.scss";
+@import "widgets/notifications.scss";
+@import "widgets/bar.scss";
+@import "widgets/prompts.scss";
+@import "widgets/quick.scss";
+
+.box-10 {
+    padding: 10px;
+}
+
+.background-box {
+    background-color: $background;
+}
+
+.bordered {
+    border-radius: 8px;
+}
+
+.shadow-box {
+    box-shadow: 2px 3px 8px 0 gtkalpha(black, .4);
+    border: 1pt solid gtkalpha($primary, .03);
+}
+
+.title-1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.title-2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.title-3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.title-4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.nobackground-window {
+    background-color: transparent;
+}
+
+.toggle-button {
+  &.active {
+    background-color: $primary_container;
+    color: $on_primary_container;
+  }
+}
+
+.false-button {
+    &:hover {
+        background-color: color-mix(in srgb, currentColor 15%, transparent);
+    }
+    &:active {
+        background-color: color-mix(in srgb, currentColor 30%, transparent);
+    }
+    margin: 3px;
+    background-color: color-mix(in srgb, currentColor 10%, transparent);
+    padding: 5px;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.clickable {
+    &:hover {
+        background-color: color-mix(in srgb, currentColor 15%, transparent);
+    }
+    &:active {
+        background-color: color-mix(in srgb, currentColor 30%, transparent);
+    }
+    transition: all 0.2s;
+}
+
+* {
+    font-family: 'JetBrains Mono Nerd Font';
+    font-weight: 600;
+    font-size: 0.780rem;
+    color: $on_background;
+}
