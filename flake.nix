@@ -33,7 +33,7 @@
         bluetooth
         apps
         notifd
-      ]
+      ];
     };
   };
 }
